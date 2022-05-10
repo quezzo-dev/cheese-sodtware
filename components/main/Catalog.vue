@@ -6,11 +6,16 @@
             img(:src="item.img").catalog__img
             .catalog__item-content
               h2.catalog__item-title {{item.title}}
+              Button(:btnText="item.btnText")
 
 </template>
 
 <script>
+import Button from "@/components/main/ButtonSmall.vue";
 export default {
+  components: {
+    Button,
+  },
   data() {
     return {
       items: [
@@ -19,18 +24,21 @@ export default {
           title: "Rust",
           btnLink: "",
           img: require("@/assets/images/catalog/rust.jpg"),
+          btnText: "Download",
         },
         {
           id: 1,
           title: "Rust",
           btnLink: "",
           img: require("@/assets/images/catalog/rust.jpg"),
+          btnText: "Download",
         },
         {
           id: 2,
           title: "Rust",
           btnLink: "",
           img: require("@/assets/images/catalog/rust.jpg"),
+          btnText: "Download",
         },
       ],
     };
@@ -78,6 +86,9 @@ export default {
   }
 
   &__item-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 4.267vw;
   }
 }
