@@ -42,7 +42,7 @@ export default {
   width: 100%;
   top: 0;
   left: 0;
-  height: 60px;
+  height: 16vw;
   background: #fff;
 
   display: flex;
