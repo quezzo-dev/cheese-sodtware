@@ -4,6 +4,7 @@
     Hero
     Catalog
     GetInTouch
+    Footer
 
 </template>
 
@@ -12,6 +13,7 @@ import Header from "@/components/main/Header.vue";
 import Hero from "@/components/main/Hero.vue";
 import Catalog from "@/components/main/Catalog.vue";
 import GetInTouch from "@/components/main/GetInTouch.vue";
+import Footer from "@/components/main/Footer.vue";
 
 export default {
   mounted() {},
@@ -29,6 +31,7 @@ export default {
     Hero,
     Catalog,
     GetInTouch,
+    Footer,
   },
 };
 </script>
