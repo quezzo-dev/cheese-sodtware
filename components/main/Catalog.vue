@@ -72,7 +72,7 @@ export default {
   &__item-title {
     color: #fff;
     font-weight: 700;
-    font-size: 11.733vw;
+    font-size: 8.8vw;
     line-height: 1;
     letter-spacing: 0.01em;
   }
