@@ -1,6 +1,6 @@
 <template lang="pug">
-    .catalog
-        .catalog__title Game catalog
+    section.catalog
+        h2.catalog__title Game catalog
         ul.catalog__list
           li.catalog__item(v-for="(item, index) in items" :key="index")
             img(:src="item.img").catalog__img
