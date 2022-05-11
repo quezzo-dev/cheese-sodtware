@@ -11,6 +11,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
+  cursor: pointer;
   width: 26.667vw;
   background: #fff;
   color: #ffa600;
@@ -20,5 +21,17 @@ export default {
   text-transform: uppercase;
   //   letter-spacing: 0.1em;
   font-weight: 700;
+
+  @media screen and (min-width: 768px) {
+    width: 13.021vw;
+    font-size: 1.823vw;
+    height: 5.078vw;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 6.944vw;
+    height: 2.639vw;
+    font-size: 0.972vw;
+  }
 }
 </style>
