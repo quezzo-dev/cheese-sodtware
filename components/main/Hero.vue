@@ -48,20 +48,7 @@
   data-onauth="onTelegramAuth(user)"
   data-request-access="write"
 ></script>
-<script type="text/javascript">
-function onTelegramAuth(user) {
-  alert(
-    "Logged in as " +
-      user.first_name +
-      " " +
-      user.last_name +
-      " (" +
-      user.id +
-      (user.username ? ", @" + user.username : "") +
-      ")"
-  );
-}
-</script>
+
 <script>
 import Button from "@/components/main/ButtonBig.vue";
 import ButtonSmall from "@/components/main/ButtonSmall.vue";
@@ -72,11 +59,30 @@ export default {
     ButtonSmall,
   },
 
+  mounted() {
+    onTelegramAuth();
+  },
+
+  methods: {
+    onTelegramAuth(user) {
+      alert(
+        "Logged in as " +
+          user.first_name +
+          " " +
+          user.last_name +
+          " (" +
+          user.id +
+          (user.username ? ", @" + user.username : "") +
+          ")"
+      );
+    },
+  },
+
   data() {
     return {
       BOT_USERNAME: "gerchik_login_bot",
       BOT_TOKEN: "5295915260:AAEnm4WCPpYdK7T6pIA8uaGfdhTrh7sogFY",
-      REDIRECT_URI: "https://gerchik.com/",
+      REDIRECT_URI: "https://cheese-software.netlify.app/",
       items: [
         {
           id: 0,
