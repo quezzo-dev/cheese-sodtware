@@ -45,7 +45,7 @@
   src="https://telegram.org/js/telegram-widget.js?19"
   data-telegram-login="samplebot"
   data-size="large"
-  data-onauth="onTelegramAuth(user)"
+  :data-onauth="onTelegramAuth(user)"
   data-request-access="write"
 ></script>
 
@@ -60,8 +60,9 @@ export default {
   },
 
   mounted() {
-    this.onTelegramAuth();
     alert(":upd");
+
+    // this.onTelegramAuth();
   },
 
   methods: {
