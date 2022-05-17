@@ -20,6 +20,13 @@
               h2.hero__slide-title Rust
               p.hero__slide-text Experimental Hack v1.2
               Button.hero__button
+              script(
+      src="https://telegram.org/js/telegram-widget.js?19"
+      :data-telegram-login="BOT_USERNAME"
+      data-size="medium"
+      :data-auth-url="REDIRECT_URI"
+      data-request-access="write")
+  
             .hero__desk-card-wrapper
               ul.hero__desk-list
                   li.hero__desk-card(v-for="(card, index) in cards" :key="index")
@@ -33,7 +40,28 @@
         
 
 </template>
-
+<script
+  async
+  src="https://telegram.org/js/telegram-widget.js?19"
+  data-telegram-login="samplebot"
+  data-size="large"
+  data-onauth="onTelegramAuth(user)"
+  data-request-access="write"
+></script>
+<script type="text/javascript">
+function onTelegramAuth(user) {
+  alert(
+    "Logged in as " +
+      user.first_name +
+      " " +
+      user.last_name +
+      " (" +
+      user.id +
+      (user.username ? ", @" + user.username : "") +
+      ")"
+  );
+}
+</script>
 <script>
 import Button from "@/components/main/ButtonBig.vue";
 import ButtonSmall from "@/components/main/ButtonSmall.vue";
@@ -46,6 +74,9 @@ export default {
 
   data() {
     return {
+      BOT_USERNAME: "gerchik_login_bot",
+      BOT_TOKEN: "5295915260:AAEnm4WCPpYdK7T6pIA8uaGfdhTrh7sogFY",
+      REDIRECT_URI: "https://gerchik.com/",
       items: [
         {
           id: 0,
