@@ -25,6 +25,7 @@
       :data-telegram-login="BOT_USERNAME"
       data-size="medium"
       :data-auth-url="REDIRECT_URI"
+      :data-onauth="onTelegramAuth(user)"
       data-request-access="write")
   
             .hero__desk-card-wrapper
@@ -60,7 +61,7 @@ export default {
   },
 
   mounted() {
-    alert("New");
+    alert("New2");
 
     // this.onTelegramAuth();
   },
