@@ -60,7 +60,8 @@ export default {
   },
 
   mounted() {
-    onTelegramAuth();
+    this.onTelegramAuth();
+    alert(":upd");
   },
 
   methods: {
